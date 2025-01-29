@@ -15,6 +15,9 @@ jobs:
       
       - name: Set up dependencies
         run: |
+          rm -r CMakePresets.json
+          wget https://raw.githubusercontent.com/techguy16/LadybirdBuild/refs/heads/main/CMakePresets2.json -O CMakePresets.json
+          
           sudo apt update
           sudo apt install -y autoconf autoconf-archive automake build-essential ccache cmake curl fonts-liberation2 git libgl1-mesa-dev nasm ninja-build pkg-config qt6-base-dev qt6-tools-dev-tools qt6-wayland tar unzip zip
           
